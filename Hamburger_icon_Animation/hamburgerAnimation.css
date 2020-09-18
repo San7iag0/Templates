@@ -1,0 +1,64 @@
+body{
+    padding: 0;
+    margin: 0;
+
+}
+.header{
+    height: 35px;
+    padding: 25px;
+    background-color:#FF4754 ;
+}
+
+#hamburgerMenu{
+    width: 25px;
+    height: 18px;
+
+    position: relative;
+    cursor: pointer;
+}
+
+#hamburgerMenu span{
+    position: absolute;
+    left: 0;
+
+    height: 3px;
+    width: 100%;
+
+    background: black;
+    border-radius: 2px;
+
+    pointer-events: none;
+
+    transition: rotate(0deg);
+    transition: .2s ease;
+}
+
+#hambuergerMenu span:nth-child(1){
+    top: 0;
+}
+
+#hamburgerMenu span:nth-child(2),
+#hamburgerMenu span:nth-child(3) {
+    top: 50%;
+}
+
+#hamburgerMenu span:nth-child(4){
+    top: 100%;
+}
+
+
+#hamburgerMenu.open span:nth-child(1),
+#hamburgerMenu.open span:nth-child(4) {
+    /* top: 50%; */
+    width: 0%;
+    left: -500%;
+}
+
+#hamburgerMenu.open span:nth-child(2){
+    transform: rotate(45deg);
+}
+
+#hamburgerMenu.open span:nth-child(3){
+    transform: rotate(-45deg);
+}
+
