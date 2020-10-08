@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+
+    color: #fff;
+    background-color: #121212;
+    
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button.btnDropdown {
+    color: #fff;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.btnDropdown svg {
+    transition: transform .2s;
+}
+
+.dropdownContainer.active button.btnDropdown svg {
+    transform: rotate(180deg);
+}
+
+.dropdownContainer.active .dropdownMenu {
+    display: block;
+}
+
+.dropdownContainer {
+    position: relative;
+}
+
+.dropdownContainer * {
+    pointer-events: none;
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+
+    display: none;
+    background: #000;
+    border: solid .1rem #ff4754;
+    padding: 1.2rem;
+    border-radius: .2rem;
+    font-size: .8rem;
+    box-shadow: 0 .4rem 1rem rgba(0, 0, 0, .6);
+}
+
+.dropdownMenu svg {
+    width: 1rem;
+}
+
+.dropdownMenu li {
+    user-select: none;
+    display: flex;
+    align-items: center;
+}
+
+.dropdownMenu li:not(:first-child){
+    margin-top: .4rem;
+}
+
+.dropdownMenu li span {
+    margin-top: .6rem;
+}
+
+.dropdownMenu .danger {
+    color: #ff4754;
+}

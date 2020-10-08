@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dropdown.css">
+</head>
+<body>
+    <div class="dropdownContainer">
+        <button class="btnDropdown">
+            <i data-feather="chevron-down"></i>
+        </button>
+
+        <ul class="dropdownMenu">
+            <li>
+                <i data-feather="archive"></i>
+                <span>Archive</span>
+            </li>
+            <li>
+                <i data-feather="bell-off"></i>
+                <span>Mute</span>
+            </li>
+            <li class="danger">
+                <i data-feather="trash-2"></i>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- <script src="./dropdown.js"></script> -->
+    <script>
+        feather.replace();
+    </script>
+    <script>
+        document.querySelectorAll('.dropdownContainer').forEach(Element => {
+            Element.addEventListener('click', event => {
+                    event.target.classList.toggle('active');
+                });
+        });
+    </script>
+</body>
+</html>
