@@ -16,11 +16,11 @@ body {
 
     color: #fff;
     background-color: #ff4754;
-    border-radius: none;
+    border-radius: 4px;
 
     padding: 1.4rem 4rem;
 
-    transition-property: apacity, box-shadow, transform;
+    transition-property: opacity, box-shadow, transform;
     transition-timing-function: ease-in-out;
     transition-duration: .2s;   
 }
@@ -43,7 +43,7 @@ body {
     position: absolute;
 
     border-radius: 50%;
-    background-color: rgba (255, 255, 255, .6);
+    background-color: rgba(255, 255, 255, .6);
     opacity: 0;
 
     animation: rippleAnimation .6 ease-in-out;
@@ -54,7 +54,7 @@ body {
         opacity: .7;
         transform: scale(0);
     }
-    80%{
+    80% {
         opacity: .3;
     }
     to {

@@ -20,7 +20,7 @@ const onClick = event => {
     }, 600);
 }
 
-document.querySelectorAll( 'btn' ).forEach( button => {
+document.querySelectorAll( '.btn-ripple' ).forEach( button => {
     button.addEventListener( 'click', onClick );
 });
  
