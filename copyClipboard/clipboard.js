@@ -1,14 +1,16 @@
-document.querySelectorAll('[data-clipboard]').forEach(element => {
-    element.addEventListener('click', event => {
-        copyToClipboard(event.target.getAttribute('dara-clipboard'));
-    });
-});
+// method to 
 
-const copyToClipboard = str => {
-    const el = document.createElement('textarea');
-    el.value = str;
-    document.body.appendChild(el);
-    el.select();
+function copy(){
+
+    let copyText = document.getElementById('inp');
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+
     document.execCommand('copy');
-    document.body.removeChild(el);
+
+}
+
+document.getElementById('btn').onclick = function(){
+    copy();
 }
